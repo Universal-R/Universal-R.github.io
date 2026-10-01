@@ -29,15 +29,17 @@
   .tab-content.active {
     display: block;
   }
+  img {
+    max-width: 200px; /* Ajusta el tamaño según tu diseño */
+    margin-top: 10px;
+  }
 </style>
 <script>
   function openTab(evt, tabId) {
-    // Ocultar todas las pestañas
     var tabs = document.getElementsByClassName("tab-content");
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].classList.remove("active");
     }
-    // Mostrar la pestaña seleccionada
     document.getElementById(tabId).classList.add("active");
   }
 </script>
@@ -51,18 +53,22 @@
 
   <div id="tab1" class="tab-content active">
     <p>TOYOTA, NISSAN, MITSUBISHI, SUZUKI, HONDA, KIA, HYUNDAI, MAHINDRA, CHANGAN, FORD, SUBARU, RENAULT</p>
+    <img src="imagenes/repuestos.jpg" alt="Imagen de repuestos">
   </div>
 
   <div id="tab2" class="tab-content">
     <p>AVA, SHELL, MOBIL, CASTROL, CHEVRON, GULF</p>
+    <img src="imagenes/lubricantes.jpg" alt="Imagen de lubricantes">
   </div>
 
   <div id="tab3" class="tab-content">
     <p>Contenido de la sección 3.</p>
+    <img src="imagenes/accesorios.jpg" alt="Imagen de accesorios">
   </div>
 
   <div id="tab4" class="tab-content">
     <p>Contenido de la sección 4.</p>
+    <img src="imagenes/herramientas.jpg" alt="Imagen de herramientas">
   </div>
 
 </body>
