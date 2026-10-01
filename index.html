@@ -19,21 +19,52 @@
     <H2>MISIÓN</H2>
     <P>Desarrollar un sistema de trazabilidad que permita la entrega de productos de calidad garantizada</P>
 </body>
-<div class="tabs">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .tab-content {
+    display: none;
+  }
+  .tab-content.active {
+    display: block;
+  }
+</style>
+<script>
+  function openTab(evt, tabId) {
+    // Ocultar todas las pestañas
+    var tabs = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("active");
+    }
+    // Mostrar la pestaña seleccionada
+    document.getElementById(tabId).classList.add("active");
+  }
+</script>
+</head>
+<body>
+
   <button onclick="openTab(event, 'tab1')">Repuestos</button>
   <button onclick="openTab(event, 'tab2')">Lubricantes</button>
   <button onclick="openTab(event, 'tab3')">Accesorios</button>
   <button onclick="openTab(event, 'tab4')">Herramientas</button>
-</div>
 
-<div id="tab1" class="tab-content">
-  <p>TOYOTA, NISSAN, MITSUBISHI, SUZUKI, HONDA, KIA, HYUNDAI, MAHINDRA, CHANGAN, FORD, SUBARU, RENAULT</p>
-</div>
-<div id="tab2" class="tab-content" style="display:none;">
-  <p>AVA, SHELL, MOBIL, CASTROL, CHEVRON, GULF</p>
-<div id="tab3" class="tab-content" style="display:none;">
-  <p>Contenido de la sección 3.</p>
- <div id="tab4" class="tab-content" style="display:none;">
-  <p>Contenido de la sección 4.</p>
-</div>
+  <div id="tab1" class="tab-content active">
+    <p>TOYOTA, NISSAN, MITSUBISHI, SUZUKI, HONDA, KIA, HYUNDAI, MAHINDRA, CHANGAN, FORD, SUBARU, RENAULT</p>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <p>AVA, SHELL, MOBIL, CASTROL, CHEVRON, GULF</p>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <p>Contenido de la sección 3.</p>
+  </div>
+
+  <div id="tab4" class="tab-content">
+    <p>Contenido de la sección 4.</p>
+  </div>
+
+</body>
+</html>
 </html>
