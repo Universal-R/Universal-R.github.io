@@ -94,3 +94,76 @@
 </body>
 </html>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Fondo semitransparente */
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  /* Cuadro del popup */
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  /* Botón de cierre */
+  .close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* Imagen dinámica */
+  .popup-content img {
+    width: 100%;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>🔥 Oferta del Día 🔥</h2>
+    <img id="popupImage" src="imagenes/oferta1.jpg" alt="Oferta especial">
+    <p>Descuento en lubricantes y repuestos seleccionados.</p>
+  </div>
+</div>
+
+<script>
+  // Cerrar el popup
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // Mostrar al cargar la página
+  window.onload = function() {
+    document.getElementById("popup").style.display = "flex";
+    // Cambiar imagen dinámicamente
+    var imagenes = ["imagenes/oferta1.jpg", "imagenes/oferta2.jpg", "imagenes/oferta3.jpg"];
+    var aleatoria = imagenes[Math.floor(Math.random() * imagenes.length)];
+    document.getElementById("popupImage").src = aleatoria;
+  };
+</script>
+
+</body>
+</html>
